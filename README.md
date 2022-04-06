@@ -25,9 +25,9 @@ Note: Changes in the sudoku cause the corresponding changes in the 9 x 9 matrix 
 If the user has given the input through 1st Tab, they are directed to the second tab and the corresponding changes in the 9 x 9 matrix is reflected in the displayed sudoku. The user can make some changes to make sure it matches the input sudoku in case of some errors.
 Note: The result from scanning isn’t always accurate and might miss some numbers or display wrong numbers in the wrong position.
 Finally the user must click the submit button which sends the 9 x 9 matrix to a function to implement the sudoku solving algorithm. \
-__Sudoku solving algorithm:__ \ 
+__Sudoku solving algorithm:__ \
 First, it checks whether in a cell there is a value or not. If there is no value, then one by one, by putting all values from 1 to 9, it checks which value is correct.
-It assumes that there is 1 in that cell and checks the condition of sudoku. If it satisfies, then it calls the main function again with an updated matrix, and if the function returns true, then we return true otherwise, backtrack and put value 2 in the cell, and so on, and if all the values are false, then we return false.
+It assumes that there is 1 in that cell and checks the condition of sudoku. If it satisfies, then it calls the main function again with an updated matrix, and if the function returns true, then we return true otherwise, backtrack and put value 2 in the cell, and so on, and if all the values are false, then we return false.\
 The final output will depend on the return statement where true will display the matrix in the form of sudoku and false will display a message indicating invalid input.
 
 ## Dart packages used in the application:
