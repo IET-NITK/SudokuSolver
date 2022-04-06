@@ -26,8 +26,9 @@ If the user has given the input through 1st Tab, they are directed to the second
 Note: The result from scanning isn’t always accurate and might miss some numbers or display wrong numbers in the wrong position.
 Finally the user must click the submit button which sends the 9 x 9 matrix to a function to implement the sudoku solving algorithm. \
 __Sudoku solving algorithm:__ \
-First, it checks whether in a cell there is a value or not. If there is no value, then one by one, by putting all values from 1 to 9, it checks which value is correct.
-It assumes that there is 1 in that cell and checks the condition of sudoku. If it satisfies, then it calls the main function again with an updated matrix, and if the function returns true, then we return true otherwise, backtrack and put value 2 in the cell, and so on, and if all the values are false, then we return false.\
+The main algorithm used in the process is __Backtracking__. we have made some sub functions inside the code to solve the different part of algorithm for sudoku solver including :\
+__IsValid()__: This function is basically made for checking the validity of a particular number in a specific index of 9 X 9 grid for correct sudoku. It takes input as grid, number, rowindex, columnindex and gives boolean validation.\
+**SolveSudoku()**: This function is basically made for solving 9 X 9 grid into correct sudoku. It terminates when the index reaches the end of the grid and also handles the boundary conditions.\
 The final output will depend on the return statement where true will display the matrix in the form of sudoku and false will display a message indicating invalid input.
 
 ## Dart packages used in the application:
