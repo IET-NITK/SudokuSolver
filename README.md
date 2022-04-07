@@ -35,4 +35,8 @@ The final output will depend on the return statement where true will display the
 - [google_ml_vision(v0.0.7)](https://pub.dev/packages/google_ml_vision)
 - [document_scanner_flutter(v0.2.5)](https://pub.dev/packages/document_scanner)
 
+## Location of the apk file
+__Note:__ This apk downloads the application only in Android phones\
+Go to __build > outputs > app > release > app-release.apk__
+
 
