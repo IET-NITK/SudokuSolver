@@ -38,7 +38,7 @@ dependencies:
 
   google_ml_vision: ^0.0.7
   document_scanner_flutter: ^0.2.5
-  flutter_markdown: ^0.6.9+1
+
 
 
 

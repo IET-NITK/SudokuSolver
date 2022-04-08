@@ -73,7 +73,7 @@ bool isValidSudoku(board) {
 }
 
 //function to check if the value is valid at position i,j
-bool check(board, int i, int j, int val) {
+bool isValid(board, int i, int j, int val) {
   int row = i - i % 3, column = j - j % 3;
   for (int x = 0; x < 9; x++) if (board[x][j] == val) return false;
   for (int y = 0; y < 9; y++) if (board[i][y] == val) return false;
@@ -90,7 +90,7 @@ bool solveSudoku(board, int i, int j) {
   if (board[i][j] != 0) return solveSudoku(board, i, j + 1);
 
   for (int c = 1; c <= 9; c++) {
-    if (check(board, i, j, c)) {
+    if (isValid(board, i, j, c)) {
       board[i][j] = c;
       l1[i][j] = c;
       if (solveSudoku(board, i, j + 1)) {
@@ -405,19 +405,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             );
                             setState(() {});
-                            /*
-                            ScaffoldMessenger.of(context)
-                                .showSnackBar(const SnackBar(
-                              content: Center(
-                                child: Text(
-                                  "Loading...",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              duration: Duration(milliseconds: 500),
-                            ));*/
+
 
                             List l2 = l1;
                             //print(index);
